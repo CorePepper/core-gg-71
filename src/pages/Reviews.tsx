@@ -18,55 +18,55 @@ const reviews: Review[] = [
     name: "わずぼーん",
     rating: 5,
     text: "タッチ感度が上がって正確なプレイができる。耐久性も凄くて気に入ってる！",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/core-gg-71/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "【αD Aves べてぃ】",
     rating: 5,
     text: "毛玉が出ないのと、長持ちするためコスパが良い！",
-    secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
+    secondImage: "/core-gg-71/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
   },
   {
     name: "【αD Aves らいむ】",
     rating: 5,
     text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
-    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
+    secondImage: "/core-gg-71/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
     name: "【αD Aves】 ひよ",
     rating: 5,
     text: "Coreサックは破れづらく耐久性もあり、滑りが程よく締め付け感もいいです。色んな指サックを転々と使ってきましたが、一番安定して実力が出せる指サックだと思います。",
-    secondImage: "/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
+    secondImage: "/core-gg-71/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
   },
   {
     name: "【αD Aves】 たけし",
     rating: 5,
     text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
-    secondImage: "/lovable-uploads/pro_player_new_icon.png"
+    secondImage: "/core-gg-71/lovable-uploads/pro_player_new_icon.png"
   },
   {
     name: "プロゲーマーF",
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/core-gg-71/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーG",
     rating: 5,
     text: "長時間のプレイでも快適な使用感が続き、パフォーマンスの向上を実感できます。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/core-gg-71/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーH",
     rating: 5,
     text: "他の製品と比較しても耐久性が段違いです。コスパも考えると間違いなく最高の選択です。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/core-gg-71/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーI",
     rating: 5,
     text: "細部まで考え抜かれた設計で、プレイヤーの要望に完璧に応えてくれる製品です。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/core-gg-71/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   }
 ];
 
@@ -82,7 +82,7 @@ const Reviews = () => {
     name: "SG/αD 皇帝",
     rating: 5,
     text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。Coreサック最高！",
-    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
+    secondImage: "/core-gg-71/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   };
 
   // Filter and reorder reviews for mobile
@@ -121,7 +121,7 @@ const Reviews = () => {
           
           <div className="lg:w-1/3 flex flex-col items-stretch gap-8">
             <img
-              src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
+              src="/core-gg-71/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
               alt="Delta Gaming Premium"
               className="w-full h-auto rounded-lg shadow-xl"
             />
