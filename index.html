@@ -46,20 +46,18 @@
 
   <!-- 
     ▼ CDNスクリプトなどがあれば、ここに追加
+    例：<script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-
-  <!-- 
-    ▼ ハッシュ付きビルド済みファイル (dist 内 /assets/xxx.js 等)
-       もしビルドで生成されたファイルを手動で読み込むなら、このような形になります。
-       Viteなどで自動生成されたハッシュ名をコピペしてください。
-  -->
-  <script type="module" crossorigin src="/assets/index-BXS3_e0-.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-DI1qrrOg.js" />
-  <link rel="modulepreload" crossorigin href="/assets/ui-x9w2L9Fm.js" />
-  <link rel="stylesheet" crossorigin href="/assets/index-EFx364b7.css" />
 </head>
 <body>
   <div id="root"></div>
+
+  <!-- 
+    ▼ Viteのエントリーファイルを読み込む
+       （例：Reactの場合 → /src/main.tsx or /src/main.jsx など）
+       実際のファイルパスに合わせて修正してください
+  -->
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
