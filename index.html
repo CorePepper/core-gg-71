@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>%VITE_SITE_TITLE%</title>
-    <meta name="description" content="%VITE_SITE_DESCRIPTION%" />
-    <meta name="author" content="CORE E-Sports" />
-    <meta property="og:image" content="%VITE_OG_IMAGE%" />
-    <link rel="preconnect" href="https://cdn.gpteng.co" />
-    <link rel="dns-prefetch" href="https://cdn.gpteng.co" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CORE E-SPORTS</title>
+  <meta name="description" content="CORE E-Sportsはゲームプレイヤーのための最高品質を追求します" />
 
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- 
+    ▼ OGPタグ (Discord, LINE, Slack, LinkedIn, Facebook など)
+       1200×628 画像を指定している例
+  -->
+  <meta property="og:title" content="CORE E-SPORTS" />
+  <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
+  <meta property="og:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
+  <meta property="og:url" content="https://core-gg.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- 
+    ▼ Twitterカード設定 (summary_large_image 形式)
+       同じ 1200×628 画像を指定
+  -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CORE E-SPORTS" />
+  <meta name="twitter:description" content="ゲームプレイヤーのための最高品質を追求します" />
+  <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
+
+  <!-- 
+    ▼ favicon (ブラウザのタブアイコン) → /favicon.png
+  -->
+  <link rel="icon" href="/favicon.png" type="image/png" />
+
+  <!-- 
+    ▼ iOS ホーム画面アイコン
+    180x180 でアップ済みなので、sizes="180x180" を指定
+  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+
+  <!-- 
+    ▼ Windowsピン留め用 (msapplication)
+    144x144 でアップ済み
+    ついでに background color 用に TileColor も設定
+  -->
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+
+  <!-- 
+    ▼ CDNスクリプトなどがあれば、ここに追加
+  -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+
+  <!-- 
+    ▼ ハッシュ付きビルド済みファイル (dist 内 /assets/xxx.js 等)
+       もしビルドで生成されたファイルを手動で読み込むなら、このような形になります。
+       Viteなどで自動生成されたハッシュ名をコピペしてください。
+  -->
+  <script type="module" crossorigin src="/assets/index-BXS3_e0-.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-DI1qrrOg.js" />
+  <link rel="modulepreload" crossorigin href="/assets/ui-x9w2L9Fm.js" />
+  <link rel="stylesheet" crossorigin href="/assets/index-EFx364b7.css" />
+</head>
+<body>
+  <div id="root"></div>
+</body>
 </html>
