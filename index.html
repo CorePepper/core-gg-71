@@ -26,27 +26,26 @@
   <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
 
   <!-- 
-    ▼ favicon (ブラウザのタブアイコン) → /favicon.png
+    ▼ favicon (ブラウザのタブアイコン) → favicon.png
+       (publicフォルダ直下に配置している想定)
   -->
-  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
 
   <!-- 
     ▼ iOS ホーム画面アイコン
-    180x180 でアップ済みなので、sizes="180x180" を指定
+    180x180 でアップ済み想定
   -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png" />
 
   <!-- 
     ▼ Windowsピン留め用 (msapplication)
     144x144 でアップ済み
-    ついでに background color 用に TileColor も設定
   -->
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="./mstile-144x144.png" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
 
   <!-- 
     ▼ CDNスクリプトなどがあれば、ここに追加
-    例：<script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
@@ -55,9 +54,9 @@
 
   <!-- 
     ▼ Viteのエントリーファイルを読み込む
-       （例：Reactの場合 → /src/main.tsx or /src/main.jsx など）
+       （例：Reactの場合 → src/main.tsx など）
        実際のファイルパスに合わせて修正してください
   -->
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="./src/main.tsx"></script>
 </body>
 </html>
