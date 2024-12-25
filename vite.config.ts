@@ -2,9 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import { imagetools } from 'vite-imagetools';
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig(({ mode }) => ({
+  // ★ baseオプションを追加
+  base: "/core-gg-71/",
+
   server: {
     host: "::",
     port: 8080,
@@ -12,8 +15,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     imagetools(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -24,8 +26,8 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["@radix-ui/react-toast", "@radix-ui/react-tooltip"],
         },
       },
     },
