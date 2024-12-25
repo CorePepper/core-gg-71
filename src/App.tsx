@@ -7,10 +7,15 @@ import Index from "./pages/Index";
 import Reviews from "./pages/Reviews";
 
 // ▼ ▼ GitHub Pages で React Router を使う際の注意点
-//    サブディレクトリ /core-gg-71/ を使う場合、BrowserRouter の basename に "/core-gg-71" を指定
-//    そうしないと、"/reviews" 等のルートが正しく動かず、真っ白になる可能性があります
+// サブディレクトリ /core-gg-71/ を使う場合、本番でのみ basename="/core-gg-71" を指定
+// ローカル開発 (npm run dev) では basename="" にしておくと、http://localhost:8080/ でアクセスしやすい
 
 const queryClient = new QueryClient();
+
+// Vite環境変数からモードを取得
+// "production" のときだけ basename="/core-gg-71" を指定する例
+const isProduction = import.meta.env.MODE === "production";
+const baseName = isProduction ? "/core-gg-71" : "";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -19,8 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
 
-      {/* ★ ここで basename="/core-gg-71" を設定 ★ */}
-      <BrowserRouter basename="/core-gg-71">
+      <BrowserRouter basename={baseName}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/reviews" element={<Reviews />} />
