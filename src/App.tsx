@@ -6,14 +6,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Reviews from "./pages/Reviews";
 
+// ▼ ▼ GitHub Pages で React Router を使う際の注意点
+//    サブディレクトリ /core-gg-71/ を使う場合、BrowserRouter の basename に "/core-gg-71" を指定
+//    そうしないと、"/reviews" 等のルートが正しく動かず、真っ白になる可能性があります
+
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      {/* Toaster & Sonner の両方を使う構成 */}
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+
+      {/* ★ ここで basename="/core-gg-71" を設定 ★ */}
+      <BrowserRouter basename="/core-gg-71">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/reviews" element={<Reviews />} />
