@@ -1,12 +1,15 @@
-import { defineConfig } from "vite";
+// vite.config.ts
+
+import { defineConfig } from "vite"; 
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 
 export default defineConfig(({ mode }) => ({
-  // ★ baseオプションを追加
-  base: "/core-gg-71/",
+  // カスタムドメインのルート直下で使うなら "/" を指定
+  // GitHub Pagesのサブディレクトリ配下で使う場合は "/core-gg-71/" のようにする
+  base: "/",
 
   server: {
     host: "::",
