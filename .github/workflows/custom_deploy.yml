@@ -26,11 +26,11 @@ jobs:
         with:
           node-version: 18
 
-      # 3) 依存パッケージをインストール
+      # 3) 依存パッケージをインストール (npm ci推奨)
       - name: Install dependencies
         run: npm ci
 
-      # 4) ビルドコマンド (package.json の "build": "vite build" を想定)
+      # 4) ビルド (package.json の "build" スクリプトを想定)
       - name: Build
         run: npm run build
 
@@ -46,7 +46,7 @@ jobs:
         uses: actions/deploy-pages@v1
         if: ${{ success() }}
 
-      # 7) 例：Botによるコミット or コメントなどを入れたい場合
+      # 7) Botによるコミット例 (不要なら消してOK)
       - name: Bot Commit
         if: ${{ success() }}
         run: |
