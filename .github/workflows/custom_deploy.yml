@@ -46,13 +46,13 @@ jobs:
         uses: actions/deploy-pages@v1
         if: ${{ success() }}
 
-      # 7) Botによるコミット例 (不要なら消してOK)
-      - name: Bot Commit
-        if: ${{ success() }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          echo "Bot updated something" >> bot-commit.txt
-          git add bot-commit.txt
-          git commit -m "chore: [bot] update something"
-          git push origin main
+      # 7) Botによるコミット例 (不要なら消す or コメントアウト)
+      # - name: Bot Commit
+      #   if: ${{ success() }}
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
+      #     echo "Bot updated something" >> bot-commit.txt
+      #     git add bot-commit.txt
+      #     git commit -m "chore: [bot] update something"
+      #     git push origin main
