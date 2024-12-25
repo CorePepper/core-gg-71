@@ -2,7 +2,7 @@ name: custom deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
 
 permissions:
   contents: write
@@ -20,13 +20,13 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # 2) Node.js環境をセットアップ（バージョンはお好みで）
+      # 2) Node.js 環境をセットアップ（バージョンはお好みで）
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 3) 依存パッケージをインストール (npm ci推奨)
+      # 3) 依存パッケージをインストール
       - name: Install dependencies
         run: npm ci
 
@@ -38,21 +38,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './dist'
+          path: "./dist"
         if: ${{ success() }}
 
       # 6) GitHub Pages にデプロイ
       - name: Deploy
         uses: actions/deploy-pages@v1
-        if: ${{ success() }}
-
-      # 7) Botによるコミット例 (不要なら消す or コメントアウト)
-      # - name: Bot Commit
-      #   if: ${{ success() }}
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "github-actions[bot]@users.noreply.github.com"
-      #     echo "Bot updated something" >> bot-commit.txt
-      #     git add bot-commit.txt
-      #     git commit -m "chore: [bot] update something"
-      #     git push origin main
+        if: ${{ succes
