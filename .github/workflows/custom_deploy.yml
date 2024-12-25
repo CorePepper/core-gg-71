@@ -16,32 +16,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) リポジトリのコードをチェックアウト
       - name: Check out code
         uses: actions/checkout@v3
 
-      # 2) Node.js 環境をセットアップ（バージョンはお好みで）
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 3) 依存パッケージをインストール
       - name: Install dependencies
         run: npm ci
 
-      # 4) ビルド (package.json の "build" スクリプトを想定)
       - name: Build
         run: npm run build
 
-      # 5) ビルド成果物(distフォルダ)をアップロード
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: "./dist"
-        if: ${{ success() }}
 
-      # 6) GitHub Pages にデプロイ
       - name: Deploy
         uses: actions/deploy-pages@v1
-        if: ${{ succes
